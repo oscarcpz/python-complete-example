@@ -2,7 +2,9 @@
 
 ## Project description
 
-xxx
+A complete example in Python to show the basic tips to develop in Python
+
+The project is simple. It takes a file, read line by line, and, each line, is splitted to operate element by element.
 
 ## Files detailed
 
@@ -44,3 +46,37 @@ $ conda activate pce
   * use comments inside the code
   * use java doc for all your methods
 * DEBUG - if you have running errors the best way to detect a fix them is using the debugger
+
+## Git flow commands
+
+1. Clone from repo `$ git clone git@github.com:oscarcpz/java-complete-example.git`
+2. Create **develop** branch if it does not exists `$ git push -u origin develop`
+3. Check status `$ git status`
+4. Change to **develop** branch `$ git checkout develop`
+5. Add all modified files `$ git add`
+6. Commit changes `$ git commit -m "Changes..."`
+7. Push to repo `$ git push`
+
+### Move develop to main
+1. `$ git checkout main`
+2. `$ git merge develop`
+3. `$ git commit -m "merge from develop"`
+4. `$ git push`
+
+## Run
+
+~~~
+$ python main.py
+~~~
+
+## Run tests
+
+~~~
+python -m unittest tests/*
+~~~
+
+## References
+
+* [Loguru](https://github.com/Delgan/loguru)
+* [Tests](https://docs.python.org/3/library/unittest.html)
+* [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
