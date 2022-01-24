@@ -9,6 +9,12 @@ from exceptions.file_exception import FileException
 
 
 def build_output_file(output, date_pattern):
+    """
+    Method to build the correct path for the output file
+    :param output: name of the output file
+    :param date_pattern: pattern to be applied to convert current date to string
+    :return: File object with the path correctly built
+    """
     if not output:
         raise FileException('[output] is mandatory')
     if not date_pattern:

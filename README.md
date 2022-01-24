@@ -12,6 +12,7 @@ xxx
 * README.md - quick documentation in [Markdown syntax](https://www.markdownguide.org/basic-syntax/). This documentation can be exported to PDF in easy and quick way.
 * logs directory - directory where logs files are stored
 * requirements.txt - list of dependencies
+* example directory - directory with some examples of files to work with
 
 ## Project configuration
 
@@ -26,3 +27,20 @@ $ conda create -n pce python=3
 $ conda activate pce
 (pce)$ pip install -r requirements.txt
 ~~~
+
+## Best practices tips
+
+* Don't reinvent the wheel - use libraries. In this project we are using:
+  * loguru - log framework
+* Use a logger - Never, never, never use _println_, because you could overload the disk. In this example we are working with loguru.
+* Avoid string constants inside code - we strongly recommend using a properties files to store all the constants. In this project we are working with **configurations/xxx_config.py**
+* Use custom exceptions - create custom exceptions to manage and control your errors
+* Don't kill the messenger - if you catch an exception, please log the message that you catch
+* Avoid "+" in string concatenation - use [f-strings](https://www.python.org/dev/peps/pep-0498/#concatenating-strings) instead. This method is more secure and efficient
+* Be paranoid - you have to be paranoid checking potential errors like null pointers
+* Delegate functionality - don't create a huge class with the whole code, divide functionality in little pills
+* Write code thinking the reviewr is a serial killer
+  * use autoexplained variable names
+  * use comments inside the code
+  * use java doc for all your methods
+* DEBUG - if you have running errors the best way to detect a fix them is using the debugger
